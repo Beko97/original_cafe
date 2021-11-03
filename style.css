@@ -234,7 +234,7 @@ footer a {
 }
 
 @media screen and (max-width: 767px) {
-    header {background: #79bfb3 url("image/headerSp.jpg") center bottom/cover;}
+    header {background: #79bfb3 url("image/headerSP.jpg") center bottom/cover;}
 
     .mainVisual_tit {width: 70%;}
 
