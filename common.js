@@ -1,11 +1,14 @@
 $(function(){
-
+    var windowW = parseInt($(window).innerWidth());
+    if (windowW < 767) {
+        var windowH = parseInt($(window).height());
+        $('.mainVisual-sp').css('height', windowH);
+    }
 
     $(window).scroll(function(){
         $('.fadeUp').each(function(){
             var topH = parseInt($(this).offset().top);
             var scroll = parseInt($(window).scrollTop());
-            var windowH = parseInt($(window).height());
             if (scroll > (topH - windowH)) {
                 $(this).addClass('fadeUp-appeared');
             }
@@ -19,7 +22,6 @@ $(function(){
     $(window).scroll(function(){
         var topH = parseInt($('.menu').offset().top);
         var scroll = parseInt($(window).scrollTop());
-        var windowH = parseInt($(window).height());
         if (scroll > (topH - windowH)) {
             $('.pageUp').fadeIn();
         } else if (scroll < (topH - windowH)) {
