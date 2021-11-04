@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+html {font-size: 62.5%;}
+
+body {
+    background-color: #79bfb3;
+    font-family: "遊明朝", "遊明朝体", serif;
+    font-size: 1.6rem;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 45px 10px;
+}
+
+h2 {
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+ul, .info_list a, .info_aside, .end_box {
+    display: flex;
+}
+
+.fadeUp {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 2s;
+}
+
+.fadeUp-appeared {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*header*/
+header {
+    background: url("image/header_img.jpg") no-repeat center top/cover;
+    min-height: 100vh;
+}
+
+.mainVisual {
+    min-height: 100vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.mainVisual_tit {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainNav_list {
+    bottom: 0;
+    position: absolute;
+    right: 1%;
+}
+
+.mainNav_list li {
+    margin-left: 20px;
+}
+
+.mainNav_list a {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+#hamburger {display: none;}
+
+/*about*/
+.about_box {
+    border-radius: 30px;
+    background-color: #ffffff;
+    height: 415px;
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.about_text {
+    bottom: 13%;
+    font-size: 2rem;
+    left: 50%;
+    line-height: 1.5;
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.about_FlowerImg {
+    left: 1%;
+    max-width: 45%;
+    position: absolute;
+    top: 3%;
+}
+
+.about_FlowerImg2 {
+    bottom: 3%;
+    max-width: 45%;
+    position: absolute;
+    right: 1%;
+}
+
+.about_centerImg {
+    left: 50%;
+    max-width: 50%;
+    position: absolute;
+    top: 10%;
+    transform: translateX(-50%);
+}
+
+.pageUp {
+    background-color:#3A302D;
+    border: ridge #3A302D 9px;
+    bottom: 1%;
+    display: none;
+    height: 65px;
+    position: fixed;
+    right: 15px;
+    text-align: center;
+    width: 65px;
+    z-index: 1;
+}
+
+.pageUp a {
+    color: #c4baaa;
+    display: block;
+    height: 100%;
+    padding-top: 8px;
+    width: 100%;
+}
+
+/*menu*/
+.menu {background-color: #c4baaa;}
+
+.info_contents {justify-content: space-around;}
+
+h3 {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.menu_list {justify-content: space-between;}
+
+.menu_list li {
+    margin-top: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.menu_text {
+    font-size: 1.8rem;
+    height: 70px;
+    margin-top: 20px;
+}
+
+.moreButton {text-align: center;}
+
+/*info*/
+.info {background: #79bfb3 url("./image/news_back.jpg") no-repeat center center/cover;}
+
+.info_list {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.info_item {
+    width: 32.4%;
+    margin-left: 10px;
+}
+
+.info_item:first-of-type, .info_item:nth-of-type(4) {margin-left: 0;}
+
+.info_item-marginB {margin-bottom: 10px;}
+
+.info_item a {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    color: #000000;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.info_list p {
+    font-size: 1.8rem;
+    margin: 0;
+    text-align: center;
+}
+
+.info_aside {
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.info .moreButton {margin-top: 20px;}
+
+.info_banner {width: 48%;}
+
+/*footer*/
+footer {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.end {
+    padding-top: 16px;
+    padding-bottom: 0;
+}
+
+.end_box {
+    align-items: baseline;
+    margin: 0 auto;
+}
+
+footer li {margin-left: 20px;}
+
+footer li:first-child {margin-left: 50px;}
+
+footer a {
+    color: #79bfb3;
+    font-size: 25px;
+}
+
+.credit {
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    header {background: #79bfb3 url("image/headerSP.jpg") center bottom/cover;}
+
+    .mainVisual_tit {width: 70%;}
+
+    .menu_list, .info_aside {display: block;}
+
+    .end_box {display: none;}
+
+    h2 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .mainNav_list {
+        background-color: rgb(255, 255, 255, 0.8);
+        display: block;
+        height: 225px;
+        position: fixed;
+        right: 0;
+        text-align: center;
+        top: -35%;
+        transition: 0.5s;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .mainNav_list.clicked {top: 0;}
+
+    .mainNav_list li {margin: 25px 0;}
+
+    .mainNav_list a {color: #000000;}
+
+    #hamburger {
+        background-color: #79bfb3;
+        border: solid #79bfb3 8px;
+        border-radius: 40px;
+        cursor: pointer;
+        display: block;
+        height: 47px;
+        width: 47px;
+        position: fixed;
+        top: 8px;
+        right: 15px;
+        z-index: 1;
+    }
+
+    span,
+    span::before,
+    span::after {
+    background-color: #ffffff;
+    display: block;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+    }
+
+    span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    span::before, span:after {content:"";}
+
+    span::before {margin-top: -11px;}
+
+    span::after {margin-top: 11px;}
+
+    span.clicked {background-color: transparent;}
+
+    span.clicked::before {
+        background-color: #000000;
+        transform: rotate(45deg);
+        margin: 0;
+    }
+
+    span.clicked::after {
+        background-color: #ffffff;
+        transform: rotate(-45deg);
+        margin: 0;
+    }
+
+/*about*/
+    .about_text {
+        font-size: 2rem;
+        max-height: 215px;
+        white-space: normal;
+    }
+
+    .about_FlowerImg {
+        position: absolute;
+        top: 3%;
+        left: 1%;
+    }
+
+    .pageUp {
+        height: 40px;
+        width: 40px;
+    }
+
+    .pageUp a {
+        font-size: 0.8rem;
+        padding-top: 1px;
+    }
+
+    /*menu*/
+    h3 {font-size: 3rem;}
+
+    .menu_text {
+        font-size: 1.6rem;
+        height: auto;
+    }
+
+    .menu_list li {
+        margin: 40px auto 0 auto;
+        width: 65%;
+    }
+
+    .moreButton {margin: 20px auto 0;}
+
+    .info_list p {
+        font-size: 1.6rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .info_item {width: 48%;}
+
+    .info_item:nth-of-type(odd) {margin-left: 0;}
+
+    .info_item:nth-of-type(even) {margin-left: 10px;}
+
+    .info_banner {
+        width: auto;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .info_banner:first-of-type {margin-top: 40px;}
+
+    footer a {
+        font-size: 25px;
+    }
+
+    .end {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .credit {margin-top: 0;}
+}
