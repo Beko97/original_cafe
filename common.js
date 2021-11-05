@@ -9,14 +9,12 @@ $(function(){
         $('.fadeUp').each(function(){
             var topH = parseInt($(this).offset().top);
             var scroll = parseInt($(window).scrollTop());
+            windowH = parseInt($(window).height());
             if (scroll > (topH - windowH)) {
                 $(this).addClass('fadeUp-appeared');
             }
         });
     });
-
-    var topH = parseInt($('.about').offset().top);
-    console.log('topHは' + topH);
 
     //To top
     $(window).scroll(function(){
