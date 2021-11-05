@@ -2,7 +2,7 @@ $(function(){
     var windowW = parseInt($(window).innerWidth());
     if (windowW < 767) {
         var windowH = parseInt($(window).height());
-        $('.mainVisual-sp').css('height', windowH);
+        $('.mainVisual-sp').css('min-height', windowH);
     }
 
     $(window).scroll(function(){
